@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAWSON Dometo Laté — Développeur Flutter & Mobile</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px 50px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .avatar-container {
+            margin-bottom: 15px;
+        }
+
+        .avatar-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            color: var(--accent);
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-sub);
+            font-size: 1.25rem;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* GALERIE D'IMAGES FICTIVES DU PROJET */
+        .project-banner {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .gallery-title {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--text-sub);
+        }
+
+        .app-screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .screenshot-item {
+            text-align: center;
+        }
+
+        .screenshot-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .screenshot-img:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .caption {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-top: 6px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: #334155;
+            color: #f1f5f9;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .feature-list {
+            padding-left: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #0f172a;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="avatar-container">
+            <!-- PHOTO DE PROFIL FICTIVE (À remplacer par votre photo plus tard) -->
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="LAWSON Dometo Laté" class="avatar-img">
+        </div>
+        <h1>LAWSON Dometo Laté</h1>
+        <p>Développeur Flutter & Mobile | Concepteur d'applications performantes sur-mesure</p>
+    </header>
+
+    <div class="container">
+
+        <!-- À PROPOS -->
+        <section>
+            <h2>À propos de moi</h2>
+            <p>
+                Développeur passionné basé au Togo, je suis spécialisé dans la conception d'applications mobiles cross-platform (Android & iOS) fluides et performantes avec <strong>Flutter & Dart</strong>. 
+                J'accorde une importance particulière à la propreté du code, à la gestion d'état réactive (Provider) et à l'intégration d'architectures back-end modernes (PocketBase).
+            </p>
+        </section>
+
+        <!-- PROJET PHARE -->
+        <section>
+            <h2>Projet Phare</h2>
+            <h3>✂️ TailorFlow — Application de Gestion d'Atelier de Couture</h3>
+            <span class="tagline">Une solution digitale complète pour automatiser la gestion des clients, des mensurations et des commandes.</span>
+
+            <!-- BANNIÈRE DU PROJET -->
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="TailorFlow Banner" class="project-banner">
+
+            <p>
+                <strong>TailorFlow</strong> est une application mobile développée pour éliminer les carnets papier dans les ateliers de couture. Elle permet aux couturiers et tailleurs d'enregistrer précisément les données clients, de conserver l'historique complet des mensurations et d'assurer un suivi en temps réel des commandes en cours de fabrication.
+            </p>
+
+            <!-- APERÇU DES ÉCRANS (CAPTURES D'ÉCRAN FICTIVES) -->
+            <p class="gallery-title"><strong>📸 Aperçu des Écrans de l'Application :</strong></p>
+            <div class="app-screenshots">
+                <div class="screenshot-item">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80" alt="Écran Gestion des Clients" class="screenshot-img">
+                    <p class="caption">1. Liste & Profils Clients</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80" alt="Écran Carnet de Mensurations" class="screenshot-img">
+                    <p class="caption">2. Prise de Mesures Sur-Mesure</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=400&q=80" alt="Écran Suivi des Commandes" class="screenshot-img">
+                    <p class="caption">3. Suivi des Commandes</p>
+                </div>
+            </div>
+
+            <h4>🛠️ Stack Technique</h4>
+            <ul class="skills-list">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider (State Management)</li>
+                <li>PocketBase (Backend & DB)</li>
+                <li>REST API</li>
+                <li>Git & GitHub</li>
+            </ul>
+
+            <h4>✨ Fonctionnalités Clés</h4>
+            <ul class="feature-list">
+                <li><strong>Gestion des clients :</strong> Enregistrement rapide des coordonnées et de l'historique d'achat.</li>
+                <li><strong>Carnet de mensurations dynamique :</strong> Saisie structurée des mesures corporelles (tour de poitrine, longueur de manche, taille, etc.).</li>
+                <li><strong>Suivi des commandes :</strong> Statuts de fabrication (En attente, En cours, Prêt, Livré) avec dates de livraison.</li>
+                <li><strong>Interface réactive :</strong> Mise à jour instantanée de l'interface grâce à Provider et PocketBase.</li>
+            </ul>
+
+            <a href="https://github.com/VOTRE_PSEUDO/tailorflow" target="_blank" class="btn">Consulter le projet sur GitHub</a>
+        </section>
+
+        <!-- COMPÉTENCES -->
+        <section>
+            <h2>Compétences Techniques</h2>
+            <ul class="skills-list">
+                <li>Flutter & Dart</li>
+                <li>Provider</li>
+                <li>PocketBase</li>
+                <li>Firebase / Supabase</li>
+                <li>REST APIs</li>
+                <li>Git & GitHub</li>
+                <li>UI/UX Material 3</li>
+                <li>Architecture réactive</li>
+            </ul>
+        </section>
+
+        <!-- CONTACT -->
+        <section>
+            <h2>Me Contacter</h2>
+            <p>Vous avez un projet d'application mobile ou besoin d'un renfort en développement Flutter ? Échangeons !</p>
+            <ul class="contact-info">
+                <li>📧 <strong>Email :</strong> <a href="mailto:votre.email@example.com">votre.email@example.com</a></li>
+                <li>💼 <strong>LinkedIn :</strong> <a href="https://linkedin.com/in/dometo-late-lawson" target="_blank">LAWSON Dometo Laté</a></li>
+                <li>🐙 <strong>GitHub :</strong> <a href="https://github.com/VOTRE_PSEUDO" target="_blank">github.com/VOTRE_PSEUDO</a></li>
+                <li>📍 <strong>Localisation :</strong> Lomé, Togo (Disponible en Remote / Télétravail)</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 LAWSON Dometo Laté — Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
